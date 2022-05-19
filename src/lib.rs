@@ -47,7 +47,7 @@ fn get_model<'a>(event_ids: Vec<i32>, base_path: String, py: Python) -> Vec<&PyD
 }
 
 #[pymodule]
-fn catastrophy_risk_modelling(_py: Python, m: &PyModule) -> PyResult<()> {
+fn catastrophe_risk_modelling(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_wrapped(wrap_pyfunction!(get_model))?;
 
     Ok(())
