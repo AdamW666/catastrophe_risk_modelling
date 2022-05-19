@@ -6,7 +6,7 @@ from setuptools import dist
 dist.Distribution().fetch_build_eggs(['setuptools_rust'])
 
 setup(
-    name="flitton-oasis-risk-modelling",
+    name="catastrophe-risk-modelling",
     version="0.1",
     rust_extensions=[RustExtension(
         ".catastrophe_risk_modelling.catastrophe_risk_modelling",
