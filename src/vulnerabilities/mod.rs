@@ -1,9 +1,15 @@
-vulnerability_id,intensity_bin_id,damage_bin_id,probability
-1,1,1,0.45
-1,2,2,0.65
-2,3,1,0.78
-2,4,2,0.22
-3,1,1,0.89
-3,4,3,0.11
-4,2,1,0.35
-4,5,3,0.65
+pub mod processes;
+pub mod structs;
+
+use crate::footprint::structs::FootPrint;
+use processes::{merge_footprint_with_vulneralbilities, read_vulnerabilities};
+use structs::VulnerabilityFootPrint;
+
+pub fn merge_vulnerablities_wite_footprints(
+    footprints: Vec<FootPrint>,
+    base_path: String,
+) -> Vec<VulnerabilityFootPrint> {
+    let vulnerabilities = read_vulnerabilities(base_path).unwrap();
+
+    merge_footprint_with_vulneralbilities(vulnerabilities, footprints)
+}

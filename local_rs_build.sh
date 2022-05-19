@@ -1,0 +1,1 @@
+cargo rustc --lib --manifest-path Cargo.toml --release -v --features pyo3/extension-module -- --crate-type cdylib
