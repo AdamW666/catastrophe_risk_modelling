@@ -1,5 +1,5 @@
 import os
-from catastrophe_risk_modelling import *
+from catastrophe_risk_modelling.catastrophe_risk_modelling import *
 
 
 def construct_model(event_ids):
